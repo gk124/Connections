@@ -19,7 +19,7 @@ app.use("/api/messages",messageRoutes);
 app.use("/api/users",userRoutes);
 
 app.get('/',(req,res)=>{
-    res.send("Hello World2!");
+    res.send("Wellcome to Time_To_Connect!");
 })
 
 

@@ -8,8 +8,13 @@ const Sidebar = () => {
     <div className='border-r border-slate-200 p-4 flex flex-col'>
         <SearchInput />
         {/* divider */}
+
+        {/* this was the part of the original code */}
+        {/* 
         <div className='divider px-3'></div>
-        <Conversations />
+        <Conversations /> */}
+
+        
         <div className='px-3'></div>
         <LogoutButton />
     </div>

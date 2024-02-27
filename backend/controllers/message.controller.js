@@ -53,7 +53,7 @@ export const getMessages=async (req,res)=>{
         }).populate("messages");   // not referenceto messages, but give the actual array msgs objects to all the reference
 
         if(!conversation)
-            res.status(200).json([]);
+            return res.status(200).json({});
 
         const messages=conversation.messages;
 
