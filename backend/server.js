@@ -6,8 +6,9 @@ import messageRoutes from "./routes/message.routes.js"
 import userRoutes from "./routes/user.routes.js"
 
 import connectToMongoDB from "./db/connectToMongoDB.js";
+import { app, server } from "./socket/socket.js";
 
-const app=express();
+// const app=express();  //--.after integrating socket.io in server, it is imported from socket.js file, for real time
 const PORT=process.env.PORT;
 
 dotenv.config();
@@ -22,8 +23,12 @@ app.get('/',(req,res)=>{
     res.send("Wellcome to Time_To_Connect!");
 })
 
-
-app.listen(PORT,()=>{
+server.listen(PORT,()=>{
     connectToMongoDB;
     console.log(`Server running at port ${PORT}`);
 });
+
+// app.listen(PORT,()=>{
+//     connectToMongoDB;
+//     console.log(`Server running at port ${PORT}`);
+// });

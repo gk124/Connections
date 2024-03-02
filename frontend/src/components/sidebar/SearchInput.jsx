@@ -8,7 +8,7 @@ import Conversations from "./Conversations";
 const SearchInput = () => {
   const [search, setSearch] = useState("");
   const { loading, conversations: originalConversations } = useGetConversations();
-  const { setSelectedConversation } = useConversation();
+  // const { setSelectedConversation } = useConversation();
   const [filteredConversations, setFilteredConversations] = useState([]);
 
   const handleSearch = (e) => {
