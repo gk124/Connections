@@ -14,11 +14,8 @@ const Login = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center w-95 mx-auto">
+    <div className="flex flex-col items-center mt-4 w-1/4 mx-auto">
       <div className="w-full p-7 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
-        <h1 className="text-4xl font-semibold text-center text-gray-300">
-          <span className="text-blue-700">TIME_TO_CONNECT</span>
-        </h1>
         <h1 className="text-3xl font-semibold text-center text-slate-200">
           Login
         </h1>

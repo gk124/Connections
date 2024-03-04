@@ -4,32 +4,28 @@ import { Link } from "react-router-dom";
 import useSignUp from "../../hooks/useSignUp";
 
 const SignUp = () => {
-
-  const [inputs,setInputs]= useState({
-    fullName:'',
-    userName:'',
-    password:'',
-    confirmPassword:'',
-    gender:'',
+  const [inputs, setInputs] = useState({
+    fullName: "",
+    userName: "",
+    password: "",
+    confirmPassword: "",
+    gender: "",
   });
 
-  const {loading,signup}=useSignUp();
+  const { loading, signup } = useSignUp();
 
-  const handleCheckboxChange=(gender)=>{
-    setInputs({...inputs,gender:gender})
-  }
+  const handleCheckboxChange = (gender) => {
+    setInputs({ ...inputs, gender: gender });
+  };
 
-  const handleSubmit= async (e)=>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
     await signup(inputs);
-  }
+  };
 
   return (
-    <div className="flex flex-col items-center justify-center w-95 mx-auto">
+    <div className="flex flex-col items-center mt-4 w-1/4 mx-auto">
       <div className="w-full p-7 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
-        <h1 className="text-4xl font-semibold text-center text-gray-300">
-          <span className="text-blue-700">TIME_TO_CONNECT</span>
-        </h1>
         <h1 className="text-3xl font-semibold text-center text-gray-200">
           Sign-Up
         </h1>
@@ -48,7 +44,9 @@ const SignUp = () => {
               name="fullName"
               id="fullName"
               value={inputs.fullName}
-              onChange={(e)=> setInputs({...inputs, fullName:e.target.value})}
+              onChange={(e) =>
+                setInputs({ ...inputs, fullName: e.target.value })
+              }
             />
           </div>
           <div>
@@ -64,7 +62,9 @@ const SignUp = () => {
               name="userName"
               id="userName"
               value={inputs.userName}
-              onChange={(e)=> setInputs({...inputs, userName:e.target.value})}
+              onChange={(e) =>
+                setInputs({ ...inputs, userName: e.target.value })
+              }
             />
           </div>
           <div>
@@ -80,7 +80,9 @@ const SignUp = () => {
               name="password"
               id="password"
               value={inputs.password}
-              onChange={(e)=> setInputs({...inputs, password:e.target.value})}
+              onChange={(e) =>
+                setInputs({ ...inputs, password: e.target.value })
+              }
             />
           </div>
           <div>
@@ -96,11 +98,16 @@ const SignUp = () => {
               name="password"
               id="confirnPassword"
               value={inputs.confirmPassword}
-              onChange={(e)=> setInputs({...inputs, confirmPassword:e.target.value})}
+              onChange={(e) =>
+                setInputs({ ...inputs, confirmPassword: e.target.value })
+              }
             />
           </div>
 
-          <GenderCheckbox onCheckboxChange={handleCheckboxChange} selectedGender={inputs.gender}/>
+          <GenderCheckbox
+            onCheckboxChange={handleCheckboxChange}
+            selectedGender={inputs.gender}
+          />
 
           <Link
             to="/login"
@@ -111,7 +118,11 @@ const SignUp = () => {
 
           <div>
             <button className="btn btn-block btn-sm mt-2 " disbaled={loading}>
-              {loading?<span className='loading loading-dots'></span> : "Sign Up"}
+              {loading ? (
+                <span className="loading loading-dots"></span>
+              ) : (
+                "Sign Up"
+              )}
             </button>
           </div>
         </form>
