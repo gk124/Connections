@@ -24,7 +24,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex flex-col items-center mt-4 w-1/4 mx-auto">
+    <div className="flex flex-col items-center mt-4 w-auto mx-auto">
       <div className="w-full p-7 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
         <h1 className="text-3xl font-semibold text-center text-gray-200">
           Sign-Up
