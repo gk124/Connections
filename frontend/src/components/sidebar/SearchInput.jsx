@@ -27,7 +27,7 @@ const SearchInput = () => {
   };
 
   return (
-    <div>
+    <div className="mx-2">
       <form className="flex items-center gap-2 mt-2">
         <input
           type="text"
@@ -36,9 +36,6 @@ const SearchInput = () => {
           value={search}
           onChange={handleSearch}
         />
-        <button type="submit" className="btn btn-circle bg-blue-500 text-white">
-          <IoSearchSharp className="w-6 h-6 outline-none" />
-        </button>
       </form>
       <div className='divider px-3'></div>
       <Conversations loading={loading} conversations={search.length >= 1 ? filteredConversations : originalConversations} />
