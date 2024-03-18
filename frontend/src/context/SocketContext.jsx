@@ -15,8 +15,8 @@ export const SocketContextProvider=({children})=>{
 
     useEffect(()=>{
         if(authUser){
-            // https://connections-60wp.onrender.com
-            const socket=io("http://localhost:3000",{
+            
+            const socket=io("https://connections-60wp.onrender.com",{
                 query:{
                     userId:authUser._id,
                 }
