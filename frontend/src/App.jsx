@@ -10,8 +10,8 @@ import { useAuthContext } from "./context/AuthContext";
 function App() {
   const {authUser}=useAuthContext();
   return (
-    <div className="flex flex-col p-2 h-screen items-center justify-center">
-        <h1 className="text-5xl lg:font-semibold md:font-bold sm:font-normal  text-black italic">
+    <div className="flex flex-col p-2 h-screen items-center justify-center relative">
+        <h1 className="text-5xl lg:font-semibold md:font-bold sm:font-normal text-black italic">
             CONNECTIONS
         </h1>
       <Routes>

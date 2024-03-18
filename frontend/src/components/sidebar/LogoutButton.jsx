@@ -7,7 +7,7 @@ const LogoutButton = () => {
   const {loading,logout}=useLogout();
   const {authUser}=useAuthContext();
   return (
-    <div className='mt-auto py-5 px-2 bg-slate-800 rounded-lg'>
+    <div className='mt-auto py-3 px-2 bg-slate-800 rounded-lg'>
     {!loading ? (
         <div className='flex'>
         <BiLogOut className="w-7 h-7 text-white cursor-pointer" onClick={logout}/>
