@@ -64,11 +64,12 @@ body{
 }
 
 @media (max-width: 460px) {
-	.containers {
-		margin-bottom:auto;
-	  width: 350px;
-	  font-size: 12px;
-		size: 20vh;
-		display: block;
-	}
-  }
+    .containers {
+        width: 350px; /* Make the container full width on small screens */
+        height: auto; /* Allow the height to adjust dynamically based on content */
+        font-size: 12px; /* Adjust font size */
+        display: block;
+        overflow-y: auto; /* Enable vertical scrolling if content exceeds viewport */
+        max-height: calc(100vh - 2rem); /* Ensure the container doesn't exceed the viewport height */
+    }
+}
