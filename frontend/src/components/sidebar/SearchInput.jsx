@@ -4,6 +4,7 @@ import useConversation from "../../zustand/useConversation";
 import useGetConversations from "../../hooks/useGetConversations";
 import toast from "react-hot-toast";
 import Conversations from "./Conversations";
+import LogoutButton from './LogoutButton'
 
 const SearchInput = () => {
   const [search, setSearch] = useState("");
@@ -28,7 +29,7 @@ const SearchInput = () => {
 
   return (
     <div className="mx-2">
-      <form className="flex items-center gap-2 mt-2">
+      <form className="flex items-center gap-2 mt-2 sticky">
         <input
           type="text"
           placeholder="Search..."
@@ -36,9 +37,14 @@ const SearchInput = () => {
           value={search}
           onChange={handleSearch}
         />
+        <div className="sm:hidden ml-auto bg-transparent"><LogoutButton /></div>
       </form>
       <div className='divider px-3'></div>
-      <Conversations loading={loading} conversations={search.length >= 1 ? filteredConversations : originalConversations} />
+      <div className='flex flex-col flex-1'>
+        <div className="overflow-auto flex-1">
+            <Conversations loading={loading} conversations={search.length >= 1 ? filteredConversations : originalConversations} />
+        </div>
+    </div>
     </div>
   );
 };

@@ -6,7 +6,8 @@ import LogoutButton from './LogoutButton'
 const Sidebar = () => {
   return (
     <div className='border-r border-slate-200 p-4 flex flex-col'>
-        <SearchInput />
+        <div className='overflow-auto'><SearchInput /></div>
+        
         {/* divider */}
 
         {/* this was the part of the original code */}
@@ -16,7 +17,8 @@ const Sidebar = () => {
 
         
         <div className='px-3'></div>
-        <LogoutButton />
+        <div className='hidden sm:block'><LogoutButton /></div>
+        
     </div>
   )
 }
