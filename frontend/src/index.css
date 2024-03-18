@@ -72,4 +72,10 @@ body{
         overflow-y: auto; /* Enable vertical scrolling if content exceeds viewport */
         max-height: calc(100vh - 2rem); /* Ensure the container doesn't exceed the viewport height */
     }
+
+	.app{
+		.max-h-\[75vh\] {
+			max-height: 75vh;
+		}
+	}
 }
